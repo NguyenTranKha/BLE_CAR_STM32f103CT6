@@ -34,31 +34,14 @@ void InitMyUSART1(void)
 	USART_Init(USART1, &TypeUSART);
 }
 
-void USART1_IRQHandler(void)
-{
-		while(USART_GetFlagStatus(USART1, USART_FLAG_RXNE) != RESET)
-		{
-			element = (char)USART_ReceiveData(USART1);//program usart auto add symbol /0 final string.
-		}
-		
-		if(element == 0x000A) 
-		{
-			sendString(StringReceive);
-			inde = 0;
-			return;
-		}
-		else{
-			StringReceive[inde] = element;
-			inde++;
-		}
-}
-
 void sendString(char *string){
 		while(*string != '\0'){
 			USART_SendData(USART1, *string);
 			 while(USART_GetFlagStatus(USART1, USART_FLAG_TXE) == RESET)
             {
 						}
+			//*string = 0;
 			string++;
 		}
+		USART_SendData(USART1, '\n');
 }
