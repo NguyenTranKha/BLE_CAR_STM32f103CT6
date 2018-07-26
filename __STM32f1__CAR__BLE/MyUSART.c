@@ -40,7 +40,6 @@ void sendString(char *string){
 			 while(USART_GetFlagStatus(USART1, USART_FLAG_TXE) == RESET)
             {
 						}
-			//*string = 0;
 			string++;
 		}
 		USART_SendData(USART1, '\n');
