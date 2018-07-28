@@ -1,7 +1,11 @@
 #include "MyUSART.h"
 
-USART_InitTypeDef TypeUSART;
-GPIO_InitTypeDef GPIO_ForUsart;
+void getStringReceive(char *DongCo, char *Servo, char *Buzz)
+{
+	*DongCo = StringReceive[0];
+	*Servo = StringReceive[1];
+	*Buzz = StringReceive[2];
+};
 
 void InitMyUSART1(void)
 {
@@ -43,4 +47,28 @@ void sendString(char *string){
 			string++;
 		}
 		USART_SendData(USART1, '\n');
+}
+
+//interrupt.
+void USART1_IRQHandler(void)
+{
+		while(USART_GetFlagStatus(USART1, USART_FLAG_RXNE) != RESET)
+		{
+			element = (char)USART_ReceiveData(USART1);//program usart auto add symbol /0 final string.
+		}
+		
+		if(element ==0x000A)
+		{
+			while(StringReceive[inde] != 0){
+				StringReceive[inde] = 0;
+				inde++;
+			}
+			sendString(StringReceive);
+			inde = 0;
+			return;
+		}
+		else{
+			StringReceive[inde] = element;
+			inde++;
+		}
 }

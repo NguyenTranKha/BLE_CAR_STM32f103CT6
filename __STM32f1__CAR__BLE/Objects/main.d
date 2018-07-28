@@ -17,3 +17,5 @@
 .\objects\main.o: C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\StdPeriph_Driver\inc\misc.h
 .\objects\main.o: Mydelay.h
 .\objects\main.o: MyUSART.h
+.\objects\main.o: MyPWM.h
+.\objects\main.o: MyGPIO.h

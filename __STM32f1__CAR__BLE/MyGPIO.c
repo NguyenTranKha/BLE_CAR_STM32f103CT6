@@ -37,8 +37,7 @@ void InitMyGPIO(void)
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB, ENABLE);
 	///init B0.
 	LED_B0.GPIO_Pin = GPIO_Pin_0;
-	//LED_B0.GPIO_Mode = GPIO_Mode_Out_OD;
-	LED_B0.GPIO_Mode = GPIO_Mode_AF_OD;
+	LED_B0.GPIO_Mode = GPIO_Mode_Out_OD;
 	LED_B0.GPIO_Speed = GPIO_Speed_2MHz;
 	GPIO_Init(GPIOB,&LED_B0);
 	

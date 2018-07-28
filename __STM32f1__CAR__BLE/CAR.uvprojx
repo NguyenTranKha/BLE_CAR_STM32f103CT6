@@ -431,6 +431,11 @@
               <FileType>1</FileType>
               <FilePath>.\MyUSART.c</FilePath>
             </File>
+            <File>
+              <FileName>MyPWM.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\MyPWM.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
