@@ -177,22 +177,27 @@
         <Ww>
           <count>0</count>
           <WinNumber>1</WinNumber>
-          <ItemText>i</ItemText>
+          <ItemText>GiaTriDongCoNhanDuoc</ItemText>
         </Ww>
         <Ww>
           <count>1</count>
           <WinNumber>1</WinNumber>
-          <ItemText>b</ItemText>
+          <ItemText>GiaTriServoNhanDuoc</ItemText>
         </Ww>
         <Ww>
           <count>2</count>
           <WinNumber>1</WinNumber>
-          <ItemText>*c</ItemText>
+          <ItemText>GiaTriDongCoTrai</ItemText>
         </Ww>
         <Ww>
           <count>3</count>
           <WinNumber>1</WinNumber>
-          <ItemText>e</ItemText>
+          <ItemText>GiaTriDongCoPhai</ItemText>
+        </Ww>
+        <Ww>
+          <count>4</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>GiaTriServo</ItemText>
         </Ww>
       </WatchWindow1>
       <Tracepoint>

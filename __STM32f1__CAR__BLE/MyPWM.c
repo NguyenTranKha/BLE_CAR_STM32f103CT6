@@ -5,19 +5,19 @@ void InitMyGPIO_PWM(void)
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
 	///init B0.
 	PWM_DongCo_Trai.GPIO_Pin = GPIO_Pin_1;
-	PWM_DongCo_Trai.GPIO_Mode = GPIO_Mode_AF_OD;
+	PWM_DongCo_Trai.GPIO_Mode = GPIO_Mode_AF_PP;
 	PWM_DongCo_Trai.GPIO_Speed = GPIO_Speed_2MHz;
 	GPIO_Init(GPIOA,&PWM_DongCo_Trai);
 	
 	///init B1.
 	PWM_DongCo_Phai.GPIO_Pin = GPIO_Pin_2;
-	PWM_DongCo_Phai.GPIO_Mode = GPIO_Mode_AF_OD;
+	PWM_DongCo_Phai.GPIO_Mode = GPIO_Mode_AF_PP;
 	PWM_DongCo_Phai.GPIO_Speed = GPIO_Speed_2MHz;
 	GPIO_Init(GPIOA,&PWM_DongCo_Phai);
 	
 	///init B10.
 	PWM_Servo.GPIO_Pin = GPIO_Pin_3;
-	PWM_Servo.GPIO_Mode = GPIO_Mode_AF_OD;
+	PWM_Servo.GPIO_Mode = GPIO_Mode_AF_PP;
 	PWM_Servo.GPIO_Speed = GPIO_Speed_2MHz;
 	GPIO_Init(GPIOA,&PWM_Servo);
 	

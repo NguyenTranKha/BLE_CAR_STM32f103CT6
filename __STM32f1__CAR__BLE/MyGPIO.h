@@ -14,5 +14,15 @@ void ToggleB0(void);
 void ToggleB0(void);
 void ToggleB0(void);
 
+void TurnOnPWM_IN1(void);
+void TurnOffPWM_IN1(void);
+void TurnOnPWM_IN2(void);
+void TurnOffPWM_IN2(void);
+void TurnOnPWM_IN3(void);
+void TurnOffPWM_IN3(void);
+void TurnOnPWM_IN4(void);
+void TurnOffPWM_IN4(void);
+
+void InitMyGPIO_PWM_IN(void);
 void InitMyGPIO(void);
 
